@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TarefaService } from './shared'; 
+import { TarefaService } from './shared';
+import { ListarTarefaComponent } from './listar'; 
+import { RouterModule } from '@angular/router'
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ListarTarefaComponent],
   imports: [
     CommonModule,
-    
+    RouterModule,
+    FormsModule
   ],
   providers: [
   TarefaService
