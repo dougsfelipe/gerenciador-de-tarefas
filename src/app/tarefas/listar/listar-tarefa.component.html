@@ -1,5 +1,5 @@
-<h1>Tarefas</h1>
 
+<br>
 <table class="table">
 
   <thead class=" thead-dark table-hover">
@@ -17,7 +17,7 @@
   <tbody> 
   <tr scope="row" *ngFor="let tarefa of tarefas">
     <td
-        [tarefaConcluida] = "tarefa.concluida"
+        [tarefaConcluida] = "!tarefa.concluida"
         [class.bg-color] = "!tarefa.concluida">
         {{tarefa.nome}}
       
@@ -25,8 +25,8 @@
     <td style="width: 70px" class="text-center ">
       <div class="custom-control custom-checkbox">
 
-        <input type="checkbox" class="custom-control-input" id="customCheck1" [value]= "tarefa.id" [checked]= "!tarefa.concluida" (click)= "alterarStatus(tarefa)">
-        <label class="custom-control-label" for="customCheck1"></label>
+        <input type="checkbox" class="custom-control-input" [id]="tarefa.id" [value]= "tarefa.id" [checked]= "!tarefa.concluida" (click)= "alterarStatus(tarefa)">
+        <label class="custom-control-label" [for]="tarefa.id" ></label>
       </div>
       
     </td>
@@ -48,7 +48,7 @@
     </td>
   </tr>
 </tbody>
-<thead class=" thead-dark table-hover">
+<thead  class=" thead-dark table-hover">
   <tr>
     <th id="borda3" scope="col">It gets easier. Every day it gets a little easier - Baboon </th>
     <th scope="col"></th>
