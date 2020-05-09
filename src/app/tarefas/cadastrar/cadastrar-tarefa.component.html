@@ -1,4 +1,5 @@
-<h1>Cadastrar tarefa</h1>
+<div class="container-fluid">
+  <h4 class="font4 text-center">Cadastrar Tarefa</h4>
 
 <div class="well">
   <form #formTarefa = "ngForm">
@@ -14,9 +15,9 @@
         minlength="5" 
         required> 
       <div *ngIf="nome.errors && (nome.dirty || nome.touched)" 
-      class="alert alert-danger">
+      class="alert alert-danger" role="alert">
         <div [hidden]="!nome.errors.required">
-          Digite a tarefa.
+          Digite uma tarefa.
         </div>
         <div [hidden]="!nome.errors.minlength">
           A tarefa deve conter ao menos 5 caracteres.
@@ -26,15 +27,17 @@
     <div class="form-group text-center">
       <input 
         type="submit"
-        class="btn btn-success"
+        class="btn btn-primary btncolor"
         (click)="cadastrar()"
         value="Cadastrar"
         [disabled]="!formTarefa.form.valid">
-      <a [routerLink]="['/tarefas']"
-        class="btn btn-default">
+        
+        <a [routerLink]="['/tarefas']"
+        class="btn btn-primary btn-light" style="margin-left: 15px;">
         <span class="glyphicon glyphicon-chevron-left" 
           aria-hidden="true"></span> Voltar
       </a>
     </div>
   </form>
+</div>
 </div>

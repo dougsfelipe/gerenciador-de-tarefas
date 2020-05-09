@@ -1,9 +1,10 @@
-<h1>Editar tarefa</h1>
+<div class="container-fluid">
+  <h4 class="font4 text-center">Editar Tarefa</h4>
 
 <div class="well">
   <form #formTarefa="ngForm">
     <div class="form-group">
-      <label for="nome">Tarefa:</label>
+      <label for="nome">Tarefa: {{tarefa.nome}}</label>
       <input 
         type="text"
         class="form-control"
@@ -27,15 +28,16 @@
     <div class="form-group text-center">
       <input 
         type="submit"
-        class="btn btn-success"
+        class="btn btn-primary btncolor"
         (click)= "atulizar()"
         value="Atualizar"
         [disabled]="!formTarefa.form.valid">
-      <a [routerLink]="['/tarefa']"
-        class="btn btn-default">
+        <a [routerLink]="['/tarefas']"
+        class="btn btn-primary btn-light" style="margin-left: 15px;">
         <span class="glyphicon glyphicon-chevron-left" 
           aria-hidden="true"></span> Voltar
       </a>
     </div>
   </form>
+</div>
 </div>

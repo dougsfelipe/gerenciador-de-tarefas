@@ -1,3 +1,8 @@
+.container-fluid{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
 #borda1 {
    
     border-top-left-radius: 15px;
@@ -22,8 +27,19 @@
     border-top-color: white;
     border-bottom-color: white;
     background-color: #5e6472;
+    font-family: 'Raleway', sans-serif;
 }
 
+.table td, .table th {
+    font-family: 'Raleway', sans-serif;
+    vertical-align: middle;
+    padding: 0.5rem;
+    padding-left: 0.8rem;
+}
+
+.table td{
+
+}
 .bg-color{
     background-color: #b8f2e6
 }
@@ -35,4 +51,22 @@
 .custom-control-input:checked~.custom-control-label::before {
     border-color: #b8f2e6;
     background-color: #b8f2e6;
+}
+
+.btncolor{
+    background-color: #84dcc6;
+    border:none;
+    font-weight: 700;
+}
+
+.btneditar{
+    background-color: #98c1d9;
+    border:none;
+    margin-right: 15px;
+}
+
+.btnremover{
+    background-color: #f4acb7;
+    border:none;
+    
 }
