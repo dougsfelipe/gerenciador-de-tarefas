@@ -1,0 +1,38 @@
+#borda1 {
+   
+    border-top-left-radius: 15px;
+}
+
+#borda2{
+   
+    border-top-right-radius: 15px;
+}
+
+#borda3 {
+   
+    border-bottom-left-radius: 15px;
+}
+
+#borda4{
+   
+    border-bottom-right-radius: 15px;
+}
+.table .thead-dark th {
+   
+    border-top-color: white;
+    border-bottom-color: white;
+    background-color: #5e6472;
+}
+
+.bg-color{
+    background-color: #b8f2e6
+}
+
+.custom-control {
+    padding-top: 8px;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: #b8f2e6;
+    background-color: #b8f2e6;
+}
